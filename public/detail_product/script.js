@@ -257,3 +257,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', toggleButtons);
   toggleButtons();
 });
+
+

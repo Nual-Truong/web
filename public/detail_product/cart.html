@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="../index/">
+            <img src="#" alt="ReadOn" class="logo" />
+          </a>
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Tìm kiếm sách, tác giả, nhà xuất bản..."
+            />
+            <button class="search-button" onclick="searchBooks()">
+              <img src="../store/search.png" alt="Search" />
+            </button>
+          </div>
+          <div class="nav-icons">
+            <a href="#" class="nav-icon">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9'%3E%3C/path%3E%3Cpath d='M13.73 21a2 2 0 0 1-3.46 0'%3E%3C/path%3E%3C/svg%3E"
+                alt="Notifications"
+              />
+              <span>Thông Báo</span>
+            </a>
+            <a href="/public/detail_product/cart.html" class="nav-icon">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='21' r='1'%3E%3C/circle%3E%3Ccircle cx='20' cy='21' r='1'%3E%3C/circle%3E%3Cpath d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6'%3E%3C/path%3E%3C/svg%3E"
+                  alt="Cart"
+                />
+                <span>Giỏ Hàng</span>
+              </a>
+            <a href="../login/login.html" class="nav-icon">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'%3E%3C/path%3E%3Ccircle cx='12' cy='7' r='4'%3E%3C/circle%3E%3C/svg%3E"
+                alt="Account"
+              />
+              <span>Tài khoản</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-------------------------Giỏ hàng------------------------  -->
+<section class="cart">
+    <div class="container">
+        <div class="cart-top-wrap">
+            <div class="cart-top">
+                <div class="cart-top-cart cart-top-item">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+    
+                <div class="cart-top-address cart-top-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+    
+                <div class="cart-top-payment cart-top-item">
+                    <i class="fas fa-money-check-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cart-content row">
+            <div class="cart-content-left">
+                <table>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>SL</th>
+                        <th>Thành tiền</th>
+                        <th>Xóa</th>
+                    </tr>
+                    <div class="product-info">
+                        <tr>
+                            <td><img id="product-img" src="" alt="Product Image"></td>
+                            <td><p product-title>Truyện Tranh </p></td>                          
+                            <td><input type="number" value="1" min="1"></td>
+                            <td><p id="product-price">100.000 <sup>đ</sup></p></td>
+                            <td><span>X</span></td>
+                        </tr>
+                    </div>
+                </table>
+            </div>
+                
+            <div class="cart-content-right">
+                <table>
+                    <tr>
+                        <th colspan="2">Tổng Tiền Giỏ Hàng</th>
+                    </tr>
+
+                    <tr>
+                        <td>Tổng Sản Phẩm: </td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tổng tiền hàng</td>
+                        <td><p>100.000 <sup>đ</sup></p></td>
+                    </tr>
+
+                    <tr>
+                        <td>Tạm Tính</td>
+                        <td><p style="color: black; font-weight: bold;">100.000 <sub>đ</sub></p></td>
+                    </tr>
+                </table>
+
+                <div class="cart-content-right-text">
+                    <p>Bạn sẽ được miễn phí ship khi đơn hàng của bạn có tổng giá trị trên 300.000 đ</p>
+                    <p style="color: red; font-weight: bold;">Mua thêm <span style="font-size: 18px;">200.000đ</span> để được miễn phí SHIP</p>
+                </div>
+
+                <div class="cart-content-right-button">
+                    <button>Tiếp tục mua sắm</button>
+                    <button>Thanh Toán</button>
+                </div>
+
+                <div class="cart-content-right-dangnhap">
+                    <p>Tài khoản WEB 0503</p>
+                    <p>Hãy <a href="/public/login/login.html">Đăng nhập</a>Tài khoản để tích điểm thành viên</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Book Store</h3>
+        <p>Địa chỉ: 123 Đường Sách, Quận 1, TP. Hồ Chí Minh</p>
+        <p>Điện thoại: (0123) 456-789</p>
+        <p>Email: info@bookstore.com</p>
+      </div>
+      <div class="footer-social">
+        <h3>Kết nối với chúng tôi</h3>
+        <a href="#" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+            alt="Twitter"
+            class="social-icon"
+          />
+        </a>
+        <a href="#" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+            alt="Facebook"
+            class="social-icon"
+          />
+        </a>
+      </div>
+    </div>
+    <p>&copy; 2023 Book Store. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
